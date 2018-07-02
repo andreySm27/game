@@ -44,9 +44,9 @@ def randomStep(fir):
 		res = 2
 	if res == 0 :
 		secRes.config(image=ImageT )
-	elif res == 1 :
-		secRes.config(image=ImageL )
 	elif res == 2 :
+		secRes.config(image=ImageL )
+	elif res == 1 :
 		secRes.config(image=ImageW )
 def randomStepSh(ev):
 	fir='sh'
