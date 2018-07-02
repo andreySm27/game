@@ -7,6 +7,8 @@ res=0
 root = Tk()
 root.geometry("230x180")
 root.resizable(width=False, height=False)
+root.wm_title("Stone Paper Shear")
+root.call('wm','iconphoto',root._w,ImageTk.PhotoImage(file='icon.ico'))
 ImageSt = ImageTk.PhotoImage(file="stone.png")
 ImageSh = ImageTk.PhotoImage(file="shear.png")
 ImageP = ImageTk.PhotoImage(file="paper.png")
@@ -44,10 +46,10 @@ def randomStep(fir):
 		res = 2
 	if res == 0 :
 		secRes.config(image=ImageT )
-	elif res == 2 :
-		secRes.config(image=ImageL )
 	elif res == 1 :
 		secRes.config(image=ImageW )
+	elif res == 2 :
+		secRes.config(image=ImageL )
 def randomStepSh(ev):
 	fir='sh'
 	randomStep(fir);
@@ -60,8 +62,6 @@ def randomStepSt(ev):
 	fir='st'
 	randomStep(fir);
 	pass
-
-#Button(root,image=Image,command=lambda:print('+1 Coin')).pack()
 secL = Label(root)
 secL.place(x = 76,y=0)
 secRes = Label(root)
